@@ -1,6 +1,6 @@
 cluster_name   = "side"
 region         = "nyc3"
-node_size      = "s-4vcpu-8gb"
+node_size      = "s-2vcpu-4gb"
 node_count     = 3
 
 allowed_ssh_ips   = ["167.249.120.70/32"]  # Permite SSH apenas do seu IP específico

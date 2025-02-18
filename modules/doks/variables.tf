@@ -12,7 +12,7 @@ variable "region" {
 variable "node_size" {
   description = "Tamanho dos nós workers"
   type        = string
-  default     = "s-4vcpu-8gb"
+  default     = "s-2vcpu-4gb"
 }
 
 variable "auto_scale" {

@@ -41,3 +41,9 @@ variable "allowed_https_ips" {
   type        = list(string)
   default     = ["0.0.0.0/0"]  # 
 }
+
+variable "digitalocean_token" {
+  description = "Access Token DigitalOcean"
+  type        = string
+  sensitive   = true
+}
