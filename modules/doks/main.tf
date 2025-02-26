@@ -9,15 +9,10 @@ resource "digitalocean_kubernetes_cluster" "doks" {
   }
 
   tags = ["k8s", var.cluster_name]
-}
+  node_pool {
+    name       = "worker-pool"
+    size       = var.node_size
+    node_count = var.node_count
+  }
 
-resource "digitalocean_kubernetes_node_pool" "workers" {
-  cluster_id  = digitalocean_kubernetes_cluster.doks.id
-  name        = "worker-pool"
-  size        = var.node_size
-  node_count  = var.node_count
-  auto_scale  = true
-  min_nodes   = 2
-  max_nodes   = 5
-  tags        = ["k8s-nodes"]
 }

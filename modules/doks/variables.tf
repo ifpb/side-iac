@@ -32,3 +32,9 @@ variable "max_nodes" {
   type        = number
   default     = 5
 }
+
+variable "node_count" {
+  description = "Número de nós workers"
+  type        = number
+  default     = 3
+}

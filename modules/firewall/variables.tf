@@ -1,5 +1,8 @@
 variable "cluster_tags" {
-  description = "Lista de tags do cluster DOKS para aplicar o firewall"
+  description = "Lista de tags do cluster DOKS para aplicar o firewall"  
+}
+variable "node_pool_ids" {
+  description = "Lista de IDs dos nós do cluster"
   type        = list(string)
 }
 

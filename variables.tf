@@ -11,6 +11,7 @@ variable "region" {
 variable "node_size" {
   description = "Tamanho dos nós workers"
   type        = string
+  default = "2"
 }
 
 variable "node_count" {
@@ -47,3 +48,26 @@ variable "digitalocean_token" {
   type        = string
   sensitive   = true
 }
+#variable "allowed_ssh_ips" {
+#  description = "Lista de IPs permitidos para SSH"
+#  type        = list(string)
+#  default     = ["0.0.0.0/0"] # Restringir a IPs específicos
+#}
+
+#variable "allowed_api_ips" {
+#  description = "Lista de IPs permitidos para API do Kubernetes"
+#  type        = list(string)
+#  default     = ["0.0.0.0/0"] # Restringir a IPs específicos
+#}
+
+#variable "allowed_http_ips" {
+#  description = "Lista de IPs permitidos para HTTP"
+#  type        = list(string)
+#  default     = ["0.0.0.0/0"] # Restringir a IPs específicos
+#}
+   
+#variable "allowed_https_ips" {
+#  description = "Lista de IPs permitidos para HTTPS"
+#  type        = list(string)
+#  default     = ["0.0.0.0/0"] # Restringir a IPs específicos
+#}

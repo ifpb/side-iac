@@ -1,7 +1,7 @@
 resource "digitalocean_firewall" "k8s_cluster" {
   name = "k8s-cluster-firewall"
 
-  droplet_tag = var.cluster_tag  # Aplicar o firewall a todos os nós do cluster
+  droplet_ids = digitalocean_kubernetes_cluster.doks.node_pool[0].nodes[*].id
 
   inbound_rule {
     protocol         = "tcp"
