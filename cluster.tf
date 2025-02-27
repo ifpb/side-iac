@@ -1,7 +1,3 @@
-
-
-
-
 module "doks" {
   source = "./modules/doks"
 
