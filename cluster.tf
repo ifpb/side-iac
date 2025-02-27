@@ -9,10 +9,7 @@ module "doks" {
   region       = var.region
   node_size    = var.node_size
   node_count   = var.node_count
-  
-  providers = {
-   digitalocean = digitalocean
-  }
+
 }
 
 module "firewall" {
@@ -25,8 +22,5 @@ module "firewall" {
   allowed_api_ips = ["0.0.0.0/0"]
   allowed_http_ips = ["0.0.0.0/0"]
   allowed_https_ips = ["0.0.0.0/0"]
-  
-  providers = {
-   digitalocean = digitalocean
-  }
+
 }
