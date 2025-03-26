@@ -38,3 +38,9 @@ variable "cluster_id" {
   description = "ID do cluster DOKS"
   type        = string
 }
+
+variable "digitalocean_token" {
+  description = "Access Token DigitalOcean"
+  type        = string
+  sensitive   = true
+}

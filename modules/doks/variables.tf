@@ -39,3 +39,9 @@ variable "max_nodes" {
   type        = number
   default     = 5
 }
+
+variable "digitalocean_token" {
+  description = "Access Token DigitalOcean"
+  type        = string
+  sensitive   = true
+}
