@@ -1,6 +1,13 @@
 variable "cluster_name" {
   description = "Nome do cluster Kubernetes"
   type        = string
+  default     = "side"
+}
+
+variable "node_count" {
+  description = "Quantidade de work-nodes"
+  type        = number
+  default     = 2
 }
 
 variable "region" {

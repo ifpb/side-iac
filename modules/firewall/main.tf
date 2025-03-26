@@ -1,7 +1,7 @@
 resource "digitalocean_firewall" "k8s_cluster" {
   name = "k8s-cluster-firewall"
 
-  droplet_tag = var.cluster_tag  # Aplicar o firewall a todos os nós do cluster
+  kubernetes_cluster_id = var.cluster_id
 
   inbound_rule {
     protocol         = "tcp"
@@ -25,22 +25,5 @@ resource "digitalocean_firewall" "k8s_cluster" {
     protocol         = "tcp"
     port_range       = "443"
     source_addresses = var.allowed_https_ips
-  }
-
-  outbound_rule {
-    protocol              = "tcp"
-    port_range            = "53"
-    destination_addresses = ["0.0.0.0/0", "::/0"]
-  }
-
-  outbound_rule {
-    protocol              = "udp"
-    port_range            = "53"
-    destination_addresses = ["0.0.0.0/0", "::/0"]
-  }
-
-  outbound_rule {
-    protocol              = "icmp"
-    destination_addresses = ["0.0.0.0/0", "::/0"]
   }
 }
