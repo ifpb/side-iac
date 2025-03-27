@@ -1,5 +1,4 @@
 resource "digitalocean_kubernetes_cluster" "doks" {
-  cluster_id = digitalocean_kubernetes_cluster.doks.id
   name    = var.cluster_name
   region  = var.region
   version = "1.27.4-do.0"

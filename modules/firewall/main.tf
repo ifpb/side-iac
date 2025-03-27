@@ -1,8 +1,6 @@
 resource "digitalocean_firewall" "k8s_cluster" {
   name = "k8s-cluster-firewall"
 
-  kubernetes_cluster_id = var.cluster_id
-
   inbound_rule {
     protocol         = "tcp"
     port_range       = "22"
