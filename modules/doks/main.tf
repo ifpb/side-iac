@@ -1,7 +1,7 @@
 resource "digitalocean_kubernetes_cluster" "doks" {
   name    = var.cluster_name
   region  = var.region
-  version = "1.27.4-do.0"
+  version = var.cluster_version
   
   node_pool {
     name       = "default-pool"

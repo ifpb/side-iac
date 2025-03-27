@@ -35,3 +35,9 @@ variable "digitalocean_token" {
   type        = string
   sensitive   = true
 }
+
+variable "cluster_version" {
+  description = "Versão do cluster DOKS"
+  type        = string
+  default     = "1.32.2-do.0"
+}

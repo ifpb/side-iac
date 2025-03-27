@@ -6,6 +6,7 @@ module "doks" {
   node_size    = var.node_size
   node_count   = var.node_count
   digitalocean_token = var.digitalocean_token
+  cluster_version = var.cluster_version
 }
 
 module "firewall" {
