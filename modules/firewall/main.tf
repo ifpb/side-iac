@@ -13,15 +13,4 @@ resource "digitalocean_firewall" "k8s_cluster" {
     source_addresses = var.allowed_api_ips
   }
 
-  inbound_rule {
-    protocol         = "tcp"
-    port_range       = "80"
-    source_addresses = var.allowed_http_ips
-  }
-
-  inbound_rule {
-    protocol         = "tcp"
-    port_range       = "443"
-    source_addresses = var.allowed_https_ips
-  }
 }
