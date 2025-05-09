@@ -9,7 +9,7 @@ resource "digitalocean_kubernetes_cluster" "doks" {
     node_count = var.node_count
     auto_scale = true
     min_nodes  = 1
-    max_nodes  = 5
+    max_nodes  = 4
     tags       = ["k8s-nodes"]
   }
 
